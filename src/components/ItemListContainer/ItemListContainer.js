@@ -1,3 +1,7 @@
+import PokemonList from "../Pokemones/PokemonList.js";
+import Mercadolibre from "../Mercadolibre/Mercadolibre.js";
+
+
 const ItemListContainer = ({greetings}) => {
     return (
         <section className="py-5">
@@ -6,6 +10,7 @@ const ItemListContainer = ({greetings}) => {
                 <div className="container px-4 px-lg-5 my-5">
                     <div className="text-center text-white">
                         <h2 className="text-dark display-4 fw-bolder">{greetings}</h2>
+                        <Mercadolibre />
                     </div>
                 </div>
             </div>
