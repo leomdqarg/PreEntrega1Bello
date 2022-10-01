@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <ItemListContainer greetings={`próximamente listado de los productos`} />
       <ItemDetailContainer />
-      <ItemCount initial={10} stock={20} />
+      <ItemCount initial={1} stock={5} />
     </div>
   );
 }

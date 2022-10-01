@@ -6,14 +6,17 @@ const ItemListContainer = ({initial, stock}) => {
     const [counter, setCounter] = useState(initial)
 
     const onAdd = () => {
-        if (stock > 0)
+        if (counter > 0 )
         {
-            stock = stock - counter
-            alert('Items agregado al carrito:' + counter )
-        }
-        else
-        {
-            alert('No hay stock')
+            if (stock > 0 && counter <=stock)
+            {
+                stock = stock - counter
+                alert('Items agregado al carrito:' + counter )
+            }
+            else
+            {
+                alert('No hay stock suficiente')
+            }
         }
     }
 
