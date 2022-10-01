@@ -3,7 +3,7 @@ const products = [
         id: '1',
         name: 'Buzo Alpina Canguro Con Corderito Peluche Interno Unisex',
         price: '4.491',
-        category: 'buzo',
+        category: 'buzos',
         img:'https://http2.mlstatic.com/D_NQ_NP_964680-MLA50308334279_062022-O.webp',
         stock: 3,
         description: `Buzo Canguro Hoodie Campera con Corderito
@@ -18,7 +18,7 @@ const products = [
         id: '2',
         name: 'Buzo Canguro Capucha Hoodie Campera Alpina Frizado',
         price: '3.290',
-        category: 'buzo',
+        category: 'buzos',
         img:'https://http2.mlstatic.com/D_NQ_NP_671033-MLA51575860065_092022-O.webp',
         stock: 15,
         description: `Buzo Canguro Hoodie
@@ -48,7 +48,7 @@ const products = [
         id: '4',
         name: 'Buzo C/cap New Balance Lifestyle Unisex Essentials Rosa Cli',
         price: '16.569',
-        category: 'zapatillas',
+        category: 'buzos',
         img:'https://http2.mlstatic.com/D_NQ_NP_855702-MLA51442342635_092022-O.webp',
         stock: 5,
         description:`El modelo Uni-ssentials French Terry Hoodie fusiona el estilo tradicional de New Balance con un diseño 100 % unisex. Este buzo con capucha está confeccionado en un tejido de rizo francés muy agradable y presenta un bolsillo frontal y una capucha con cordones, que le confieren un estilo informal con el máximo confort.
@@ -85,12 +85,25 @@ const products = [
 ]
 
 
-export const getProducts = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products)
-        }, 2000)
-    })
+export const getProducts = (categoryId) => {
+    console.log(categoryId)
+    if (categoryId == null || categoryId == undefined)
+    {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(products)
+            }, 2000)
+        })
+    }
+    else{
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(
+                    products.filter(product => {return product.category === categoryId})
+                )
+            }, 2000)
+        })
+    }
 }
 
 export const getProduct = (productId) => {

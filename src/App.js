@@ -15,6 +15,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={ <ItemListContainer greetings={`Bienvenidos al listado de los productos (msj greetings)`} />} />
+          <Route path="/categoria/:categoryId" element={ <ItemListContainer greetings={`Bienvenidos al listado de los productos (msj greetings)`} />} />
           <Route path="product/:productId" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
