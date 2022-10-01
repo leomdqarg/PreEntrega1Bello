@@ -2,7 +2,7 @@ const products = [
     {
         id: '1',
         name: 'Buzo Alpina Canguro Con Corderito Peluche Interno Unisex',
-        price: 4491,
+        price: '4.491',
         category: 'buzo',
         img:'https://http2.mlstatic.com/D_NQ_NP_964680-MLA50308334279_062022-O.webp',
         stock: 3,
@@ -17,7 +17,7 @@ const products = [
     {
         id: '2',
         name: 'Buzo Canguro Capucha Hoodie Campera Alpina Frizado',
-        price: 3290,
+        price: '3.290',
         category: 'buzo',
         img:'https://http2.mlstatic.com/D_NQ_NP_671033-MLA51575860065_092022-O.webp',
         stock: 15,
@@ -34,7 +34,7 @@ const products = [
     {
         id: '3',
         name: 'Zapatilla Original Puma Caven Adp Blanca Unisex',
-        price: 18999,
+        price: '18.999',
         category: 'zapatillas',
         img:'https://http2.mlstatic.com/D_NQ_NP_761199-MLA50783612817_072022-O.webp',
         stock: 20,
@@ -47,7 +47,7 @@ const products = [
     {
         id: '4',
         name: 'Buzo C/cap New Balance Lifestyle Unisex Essentials Rosa Cli',
-        price: 16569,
+        price: '16.569',
         category: 'zapatillas',
         img:'https://http2.mlstatic.com/D_NQ_NP_855702-MLA51442342635_092022-O.webp',
         stock: 5,
@@ -63,7 +63,7 @@ const products = [
     {
         id: '5',
         name: 'Zapatilla Puma Original X-ray2 Square Better Unisex',
-        price: 21998,
+        price: '21.998',
         category: 'zapatillas',
         img:'https://http2.mlstatic.com/D_NQ_NP_725347-MLA50332740995_062022-O.webp',
         stock: 5,
@@ -81,7 +81,7 @@ const products = [
         - Logotipo PUMA n.º 1 en la etiqueta de la lengüeta.
         - Material reciclado: La parte superior de esta zapatilla está fabricada por lo menos con un 20% de materiales reciclados como un paso hacia un mejor futuro.
         `
-    }
+    },
 ]
 
 

@@ -1,5 +1,6 @@
 import { useState, useEffect} from "react"
-import { getProduct } from "../../asyncMock";
+import { getProduct } from "../../asyncMock"
+import ItemCount from "../ItemCount/ItemCount.js"
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true);
@@ -38,7 +39,7 @@ const ItemDetailContainer = () => {
                         <p>Descripción {product?.description}</p>
                         <p className="text-dark display-4 fw-bolder">Precio: {product?.price}</p>
                         <p className="text-dark display-4 fw-bolder">Stock: {product?.stock}</p>
-
+                        <ItemCount initial={1} stock={5} />
                     </div>
                 </div>
             </div>
