@@ -1,8 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-const ItemListContainer = ({initial, stock, onAdd}) => {
+const ItemListContainer = ({initial, stock}) => {
+
     const [counter, setCounter] = useState(initial)
+
+    const onAdd = () => {
+        if (stock > 0)
+        {
+            stock = stock - counter
+            alert('Items agregado al carrito:' + counter )
+        }
+        else
+        {
+            alert('No hay stock')
+        }
+    }
 
     const incrementCounter = () => {
         console.log('incrementCounter', counter)
@@ -22,8 +35,8 @@ const ItemListContainer = ({initial, stock, onAdd}) => {
 
     return (
         <div>
-            <div className='alert alert-primary' role='alert'>{counter}</div>
             <button onClick={incrementCounter}><FontAwesomeIcon icon={faPlusCircle} /></button>
+            <span>{counter}</span>
             <button onClick={decrementCounter}><FontAwesomeIcon icon={faMinus} /></button>
             <button onClick={onAdd}>Agregar al carrito</button>
         </div>
