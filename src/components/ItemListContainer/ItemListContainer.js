@@ -1,5 +1,4 @@
-import PokemonList from "../Pokemones/PokemonList.js";
-import Mercadolibre from "../Mercadolibre/Mercadolibre.js";
+import OMDb from "../OMDb/OMDb.js";
 
 
 const ItemListContainer = ({greetings}) => {
@@ -10,7 +9,7 @@ const ItemListContainer = ({greetings}) => {
                 <div className="container px-4 px-lg-5 my-5">
                     <div className="text-center text-white">
                         <h2 className="text-dark display-4 fw-bolder">{greetings}</h2>
-                        <Mercadolibre />
+                        <OMDb />
                     </div>
                 </div>
             </div>
