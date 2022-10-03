@@ -1,4 +1,4 @@
-const products = [
+const items = [
     {
         id: '1',
         name: 'Buzo Alpina Canguro Con Corderito Peluche Interno Unisex',
@@ -85,13 +85,13 @@ const products = [
 ]
 
 
-export const getProducts = (categoryId) => {
+export const getItems = (categoryId) => {
     console.log(categoryId)
-    if (categoryId == null || categoryId == undefined)
+    if (categoryId == null || categoryId === undefined)
     {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(products)
+                resolve(items)
             }, 2000)
         })
     }
@@ -99,17 +99,17 @@ export const getProducts = (categoryId) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(
-                    products.filter(product => {return product.category === categoryId})
+                    items.filter(item => {return item.category === categoryId})
                 )
             }, 2000)
         })
     }
 }
 
-export const getProduct = (productId) => {
+export const getItem = (itemId) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products.find(product => product.id === productId ) )
+            resolve(items.find(item => item.id === itemId ) )
         }, 2000)
     })
 }

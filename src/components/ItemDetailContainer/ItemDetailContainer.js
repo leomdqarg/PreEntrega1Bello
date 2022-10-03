@@ -1,24 +1,23 @@
 import { useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 
-import { getProduct } from "../../asyncMock"
-import ItemCount from "../ItemCount/ItemCount.js"
+import { getItem } from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail.js"
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
+    const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true);
 
-    const { productId } = useParams()
+    const { itemId } = useParams()
 
     useEffect(() => {
         setLoading(true)
-        getProduct(productId).then(product => {
-            setProduct(product)
+        getItem(itemId).then(item => {
+            setItem(item)
         }).finally(() => {
             setLoading(false)
         })
-    }, [productId])
+    }, [itemId])
     if (loading)
     {
         return (
@@ -38,10 +37,7 @@ const ItemDetailContainer = () => {
     return (
         <section className="py-5">
             <div className="container px-4 px-lg-5 my-5">
-                <div className="d-flex">
-                    <ItemCount initial={2} stock={20} />
-                </div>
-                <ItemDetail product={product} />
+                <ItemDetail item={item} />
             </div>
     </section>
     );

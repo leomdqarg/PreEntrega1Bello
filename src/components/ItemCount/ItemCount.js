@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusCircle, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 const ItemListContainer = ({initial, stock}) => {
 
@@ -38,10 +36,21 @@ const ItemListContainer = ({initial, stock}) => {
 
     return (
         <div>
-            <button onClick={incrementCounter}><FontAwesomeIcon icon={faPlusCircle} /></button>
-            <span>{counter}</span>
-            <button onClick={decrementCounter}><FontAwesomeIcon icon={faMinus} /></button>
-            <button onClick={onAdd}>Agregar al carrito</button>
+            <div className="col-auto">
+                <ul className="list-inline pb-3">
+                    <li className="list-inline-item text-right">
+                        Cantidad:
+                    </li>
+                    <li className="list-inline-item"><button onClick={decrementCounter} className="btn btn-secondary" id="btn-minus">-</button></li>
+                    <li className="list-inline-item"><span className="badge bg-secondary" id="var-value">{counter}</span></li>
+                    <li className="list-inline-item"><button onClick={incrementCounter} className="btn btn-secondary" id="btn-plus">+</button></li>
+                    <li className="list-inline-item"><span className="text-muted">({stock} disponibles)</span></li>
+                </ul>
+            </div>
+
+            <div className="col-12">
+                <button className="btn btn-success col-12" onClick={onAdd}>Agregar al carrito</button>
+            </div>
         </div>
     );
   }
